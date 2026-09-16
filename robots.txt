@@ -1,0 +1,6 @@
+# This site is unlisted. Nothing here is meant to be found in search results.
+# Note: crawlers only read /robots.txt at the domain root, so this file only takes
+# effect if a user-site repository (<owner>.github.io) is created later. The
+# noindex meta tags in index.html are what keep this page out of search engines.
+User-agent: *
+Disallow: /
