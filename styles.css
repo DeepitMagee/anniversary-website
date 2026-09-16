@@ -158,6 +158,44 @@ h1 em, h2 em { color: var(--raspberry); font-weight: 400; }
   letter-spacing: -.06em;
 }
 
+.hero-polaroids {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  pointer-events: none;
+}
+
+.hero-polaroid {
+  position: absolute;
+  width: clamp(112px, 12vw, 154px);
+  margin: 0;
+  padding: 8px 8px 25px;
+  background: #fffdfb;
+  color: var(--wine);
+  box-shadow: 0 14px 30px rgba(92, 20, 48, .2);
+  transform-origin: center bottom;
+}
+
+.hero-polaroid img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1.08;
+  object-fit: cover;
+}
+
+.hero-polaroid figcaption {
+  position: absolute;
+  right: 9px;
+  bottom: 5px;
+  font-family: var(--display);
+  font-size: clamp(.78rem, 1.2vw, 1rem);
+  font-style: italic;
+}
+
+.polaroid-one { left: 5%; top: 22%; transform: rotate(-12deg); }
+.polaroid-two { right: 3%; top: 9%; transform: rotate(10deg); }
+.polaroid-three { right: 12%; bottom: 8%; transform: rotate(-5deg); }
+
 .orbit {
   position: absolute;
   border: 1px solid rgba(200, 47, 104, .2);
@@ -390,6 +428,7 @@ footer {
   .intro { margin-top: 30px; }
   .hero-art { min-height: 430px; margin-top: 30px; }
   .heart-shape { width: min(245px, 58vw); }
+  .hero-polaroid { width: clamp(100px, 24vw, 132px); }
   .orbit-one { width: min(440px, 94vw); }
   .orbit-two { width: min(500px, 108vw); }
   .year-start { left: 7%; }

@@ -1,14 +1,33 @@
-// Add your image files to this folder, then list them below.
-// Keep the path as "photos/filename.jpg". Captions and alt text are optional.
+// Your photos are loaded in the order below. Add or remove entries as needed.
 window.ANNIVERSARY_PHOTOS = [
-  // {
-  //   src: 'photos/our-first-trip.jpg',
-  //   caption: 'Our first trip together',
-  //   alt: 'The two of us smiling on our first trip'
-  // },
-  // {
-  //   src: 'photos/a-favourite-day.jpg',
-  //   caption: 'One of my favourite days',
-  //   alt: 'A description of the photograph'
-  // }
+  { src: 'photos/CarPhoto.png', caption: 'Us ♡', alt: 'Deepit and Nishtha smiling beside a car' },
+  { src: 'photos/IMG20260729122902.jpg', caption: 'Together', alt: 'Deepit and Nishtha together overlooking a city' },
+  { src: 'photos/IMG_0545.jpg', caption: 'Always', alt: 'Deepit and Nishtha sharing a moment together' },
+  { src: 'photos/IMG20260801150927_01.jpg', caption: 'A memory of us', alt: 'A photograph from our time together' },
+  { src: 'photos/IMG-20260802-WA0077.jpg', caption: 'A memory of us', alt: 'A photograph from our time together' },
+  { src: 'photos/IMG-20260803-WA0076.jpg', caption: 'A memory of us', alt: 'A photograph from our time together' },
+  { src: 'photos/IMG_0087.jpg', caption: 'A memory of us', alt: 'A photograph from our time together' },
+  { src: 'photos/IMG_0122.jpg', caption: 'A memory of us', alt: 'A photograph from our time together' },
+  { src: 'photos/IMG_8396.jpg', caption: 'A memory of us', alt: 'A photograph from our time together' },
+  { src: 'photos/IMG_6866.jpg', caption: 'A memory of us', alt: 'A photograph from our time together' },
+  { src: 'photos/IMG_4306.jpg', caption: 'A memory of us', alt: 'A photograph from our time together' },
+  { src: 'photos/IMG_4020 (1).jpg', caption: 'A memory of us', alt: 'A photograph from our time together' },
+  { src: 'photos/IMG20250414141029.jpg', caption: 'A memory of us', alt: 'A photograph from our time together' },
+  { src: 'photos/IMG-20250401-WA0001.jpg', caption: 'A memory of us', alt: 'A photograph from our time together' },
+  { src: 'photos/IMG-20250401-WA0003.jpg', caption: 'A memory of us', alt: 'A photograph from our time together' },
+  { src: 'photos/IMG-20250330-WA0058.jpg', caption: 'A memory of us', alt: 'A photograph from our time together' },
+  { src: 'photos/IMG-20250330-WA0059.jpg', caption: 'A memory of us', alt: 'A photograph from our time together' },
+  { src: 'photos/IMG-20250330-WA0061.jpg', caption: 'A memory of us', alt: 'A photograph from our time together' },
+  { src: 'photos/IMG-20250330-WA0063.jpg', caption: 'A memory of us', alt: 'A photograph from our time together' },
+  { src: 'photos/IMG-20250330-WA0069.jpg', caption: 'A memory of us', alt: 'A photograph from our time together' },
+  { src: 'photos/IMG_20250330_113114.jpg', caption: 'A memory of us', alt: 'A photograph from our time together' },
+  { src: 'photos/IMG-20250326-WA0060.jpg', caption: 'A memory of us', alt: 'A photograph from our time together' },
+  { src: 'photos/IMG-20250326-WA0061.jpg', caption: 'A memory of us', alt: 'A photograph from our time together' },
+  { src: 'photos/IMG-20250326-WA0063.jpg', caption: 'A memory of us', alt: 'A photograph from our time together' },
+  { src: 'photos/IMG-20250326-WA0067.jpg', caption: 'A memory of us', alt: 'A photograph from our time together' },
+  { src: 'photos/IMG-20250326-WA0069.jpg', caption: 'A memory of us', alt: 'A photograph from our time together' },
+  { src: 'photos/IMG-20250326-WA0070.jpg', caption: 'A memory of us', alt: 'A photograph from our time together' },
+  { src: 'photos/IMG-20250326-WA0071.jpg', caption: 'A memory of us', alt: 'A photograph from our time together' },
+  { src: 'photos/IMG-20250326-WA0072.jpg', caption: 'A memory of us', alt: 'A photograph from our time together' },
+  { src: 'photos/35883d1e-5b2a-4f2f-9a35-33e95fbf0483.jpg', caption: 'A memory of us', alt: 'A photograph from our time together' }
 ];
