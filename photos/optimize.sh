@@ -30,7 +30,17 @@ for source in *.[jJ][pP][gG] *.[jJ][pP][eE][gG] *.[pP][nN][gG]; do
   stem=$(printf '%s' "$stem" | sed -e 's/[^A-Za-z0-9._-]/_/g' -e 's/__*/_/g' -e 's/_*$//')
 
   target="optimized/${stem}.webp"
-  cwebp -quiet -q "$QUALITY" -resize "$MAX_EDGE" 0 "$source" -o "$target"
+
+  # Cap the LONG side: cwebp's -resize W H keeps the aspect ratio only when one
+  # value is 0, so portrait sources need the height pinned instead of the width.
+  read -r width height < <(sips -g pixelWidth -g pixelHeight "$source" | awk '/pixel/{print $2}' | paste -sd' ' -)
+  if [ "${width:-0}" -ge "${height:-0}" ]; then
+    resize=("$MAX_EDGE" 0)
+  else
+    resize=(0 "$MAX_EDGE")
+  fi
+
+  cwebp -quiet -q "$QUALITY" -resize "${resize[@]}" "$source" -o "$target"
   printf '%-60s %8s -> %8s\n' "$target" "$(du -h "$source" | cut -f1)" "$(du -h "$target" | cut -f1)"
   count=$((count + 1))
 done
