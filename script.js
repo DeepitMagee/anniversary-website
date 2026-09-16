@@ -22,20 +22,76 @@ function initialisePhotoGallery() {
   const image = document.querySelector('[data-gallery-image]');
   const caption = document.querySelector('[data-photo-caption]');
   const count = document.querySelector('[data-photo-count]');
+  const thumbnails = document.querySelector('[data-photo-thumbs]');
   let current = 0;
   let timer;
+  let changeToken = 0;
+  const preloadedSources = new Set();
+
+  const preloadPhoto = (index) => {
+    const photo = photos[(index + photos.length) % photos.length];
+    if (!photo || preloadedSources.has(photo.src)) return;
+
+    const preloader = new Image();
+    preloader.decoding = 'async';
+    preloader.src = photo.src;
+    preloadedSources.add(photo.src);
+  };
+
+  const thumbnailSource = (photo) => photo.thumb || photo.src.replace('/optimized/', '/optimized/thumbs/');
+
+  const thumbnailButtons = photos.map((photo, index) => {
+    const button = document.createElement('button');
+    button.className = 'gallery-thumb';
+    button.type = 'button';
+    button.setAttribute('aria-label', `Show memory ${index + 1}`);
+    button.setAttribute('aria-current', index === 0 ? 'true' : 'false');
+
+    const thumbnail = document.createElement('img');
+    thumbnail.src = thumbnailSource(photo);
+    thumbnail.alt = '';
+    thumbnail.loading = index === 0 ? 'eager' : 'lazy';
+    thumbnail.decoding = 'async';
+    button.append(thumbnail);
+    thumbnails.append(button);
+
+    button.addEventListener('click', () => { show(index); restart(); });
+    return button;
+  });
+
+  const updateThumbnails = () => {
+    thumbnailButtons.forEach((button, index) => {
+      button.setAttribute('aria-current', index === current ? 'true' : 'false');
+    });
+
+    const activeThumbnail = thumbnailButtons[current];
+    if (!activeThumbnail) return;
+    thumbnails.scrollTo({
+      left: activeThumbnail.offsetLeft - ((thumbnails.clientWidth - activeThumbnail.clientWidth) / 2),
+      behavior: 'smooth'
+    });
+  };
 
   const show = (index) => {
     current = (index + photos.length) % photos.length;
     const photo = photos[current];
+    const token = ++changeToken;
     frame.classList.add('is-changing');
+    updateThumbnails();
+    preloadPhoto(current);
+    preloadPhoto(current + 1);
+    preloadPhoto(current - 1);
 
     window.setTimeout(() => {
+      if (token !== changeToken) return;
+
+      const finish = () => frame.classList.remove('is-changing');
+      image.addEventListener('load', finish, { once: true });
       image.src = photo.src;
       image.alt = photo.alt || photo.caption || `Memory ${current + 1}`;
       caption.textContent = photo.caption || '';
       count.textContent = `${String(current + 1).padStart(2, '0')} / ${String(photos.length).padStart(2, '0')}`;
-      image.addEventListener('load', () => frame.classList.remove('is-changing'), { once: true });
+      if (image.complete && image.naturalWidth > 0) finish();
     }, 220);
   };
 

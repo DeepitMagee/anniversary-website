@@ -95,8 +95,8 @@
         <p>How has it been a lifetime already? Look at us. So much we’ve done, and yet we have a whole life ahead to live. I can’t wait for it, baby.</p>
       </div>
 
-      <div class="photo-carousel" aria-roledescription="carousel" aria-label="Our photo memories">
-        <div class="photo-frame" data-photo-frame aria-live="polite">
+      <div class="photo-carousel" role="region" aria-roledescription="carousel" aria-label="Our photo memories">
+        <div class="photo-frame" data-photo-frame>
           <img data-gallery-image src="photos/placeholder.svg" alt="Add your favourite photos to begin the gallery">
         </div>
         <div class="photo-caption">
@@ -107,6 +107,7 @@
           <button class="gallery-button" type="button" data-photo-prev aria-label="Previous photo">←</button>
           <button class="gallery-button" type="button" data-photo-next aria-label="Next photo">→</button>
         </div>
+        <div class="gallery-thumbs" data-photo-thumbs role="toolbar" aria-label="Choose a memory"></div>
       </div>
     </section>
 

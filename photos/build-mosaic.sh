@@ -1,15 +1,20 @@
 #!/usr/bin/env bash
 # Build the repeating photo-mosaic tile used as the gallery section background.
 #
-#   ./photos/build-mosaic.sh
+#   ./photos/build-mosaic.sh "/path/to/private/originals"
 #
-# Every photo in photos/ is cropped to a square cell and stacked into one image,
-# photos/optimized/background-mosaic.webp, which styles.css repeats behind the
-# gallery section. The cell size stays fixed, so the tile grows as photos are
-# added rather than shrinking them.
+# Every photo in the supplied source directory is cropped to a square cell and
+# stacked into photos/optimized/background-mosaic.webp, which styles.css repeats
+# behind the gallery section. The cell size stays fixed, so the tile grows as
+# photos are added rather than shrinking them.
 set -euo pipefail
 
-cd "$(dirname "$0")"
+SCRIPT_DIR=$(cd -- "$(dirname -- "$0")" && pwd)
+SOURCE_DIR=${1:-}
+[ -n "$SOURCE_DIR" ] || { echo "usage: $0 /path/to/private/originals" >&2; exit 1; }
+[ -d "$SOURCE_DIR" ] || { echo "source directory not found: $SOURCE_DIR" >&2; exit 1; }
+SOURCE_DIR=$(cd -- "$SOURCE_DIR" && pwd)
+OUTPUT_DIR="$SCRIPT_DIR/optimized"
 
 CELL=256          # cell edge in pixels
 QUALITY=68        # cwebp quality for the finished tile
@@ -21,13 +26,13 @@ for tool in ffmpeg cwebp sips; do
 done
 
 sources=()
-for original in *.[jJ][pP][gG] *.[jJ][pP][eE][gG] *.[pP][nN][gG]; do
+for original in "$SOURCE_DIR"/*.[jJ][pP][gG] "$SOURCE_DIR"/*.[jJ][pP][eE][gG] "$SOURCE_DIR"/*.[pP][nN][gG]; do
   [ -e "$original" ] || continue
   sources+=("$original")
 done
 
 count=${#sources[@]}
-[ "$count" -gt 0 ] || { echo "no photos found in photos/" >&2; exit 1; }
+[ "$count" -gt 0 ] || { echo "no photos found in $SOURCE_DIR" >&2; exit 1; }
 
 # Square-ish grid, filled out by repeating photos when the count does not divide.
 cols=$(awk -v n="$count" 'BEGIN { print int(sqrt(n) + 0.999) }')
@@ -70,7 +75,7 @@ ffmpeg -hide_banner -loglevel error -y "${inputs[@]}" \
   -filter_complex "${filter}${streams}xstack=inputs=${cells}:layout=${layout}" \
   -frames:v 1 "$WORK/mosaic.png"
 
-cwebp -quiet -q "$QUALITY" -m 6 "$WORK/mosaic.png" -o optimized/background-mosaic.webp
+cwebp -quiet -q "$QUALITY" -m 6 "$WORK/mosaic.png" -o "$OUTPUT_DIR/background-mosaic.webp"
 
-size=$(stat -f%z optimized/background-mosaic.webp)
-echo "wrote optimized/background-mosaic.webp  $((size / 1024)) KB  (${cols}x${rows} cells of ${CELL}px)"
+size=$(stat -f%z "$OUTPUT_DIR/background-mosaic.webp")
+echo "wrote $OUTPUT_DIR/background-mosaic.webp  $((size / 1024)) KB  (${cols}x${rows} cells of ${CELL}px)"

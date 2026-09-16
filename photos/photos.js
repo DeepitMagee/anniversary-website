@@ -1,6 +1,7 @@
 // Your photos are loaded in the order below. Add or remove entries as needed.
 // All src paths point at the optimised WebP copies in photos/optimized/.
-// To add a new photo: drop the original in photos/, run photos/optimize.sh, then add an entry below.
+// Keep originals outside the repository. To add a photo: put it in your private
+// source folder, run photos/optimize.sh with that folder, then add an entry below.
 window.ANNIVERSARY_PHOTOS = [
   { src: 'photos/optimized/CarPhoto.webp', caption: '2 sweet bubbas in love ♡', alt: 'Deepit and Nishtha smiling beside a car' },
   { src: 'photos/optimized/IMG20260729122902.webp', caption: '2 sweet bubbas in love ♡', alt: 'Deepit and Nishtha together overlooking a city' },

@@ -1,1 +1,6 @@
 .DS_Store
+
+# Keep full-resolution source photos in the private archive outside this repo.
+photos/*.jpg
+photos/*.jpeg
+photos/*.png
