@@ -79,6 +79,10 @@ nav a:hover, nav a:focus-visible { color: var(--raspberry); }
   gap: clamp(30px, 7vw, 110px);
 }
 
+/* Without this the columns take their min-content width and the art column can sit
+   wider than the page, pushing the polaroids off the right edge of the screen. */
+.hero > * { min-width: 0; }
+
 .eyebrow {
   margin: 0 0 28px;
   display: flex;
@@ -97,7 +101,7 @@ h1, h2 { font-family: var(--display); font-weight: 400; }
 h1 {
   max-width: 760px;
   margin: 0;
-  font-size: clamp(4.25rem, 7.8vw, 8.2rem);
+  font-size: clamp(4.25rem, 7.8vw, 7rem);
   line-height: .87;
   letter-spacing: -.045em;
 }
@@ -128,7 +132,7 @@ h1 em, h2 em { color: var(--raspberry); font-weight: 400; }
 
 .hero-art {
   position: relative;
-  min-height: min(600px, 65vw);
+  min-height: min(790px, 74vw);
   display: grid;
   place-items: center;
 }
@@ -167,7 +171,7 @@ h1 em, h2 em { color: var(--raspberry); font-weight: 400; }
 
 .hero-polaroid {
   position: absolute;
-  width: clamp(112px, 12vw, 154px);
+  width: clamp(160px, 18vw, 248px);
   margin: 0;
   padding: 8px 8px 25px;
   background: #fffdfb;
@@ -188,13 +192,13 @@ h1 em, h2 em { color: var(--raspberry); font-weight: 400; }
   right: 9px;
   bottom: 5px;
   font-family: var(--display);
-  font-size: clamp(.78rem, 1.2vw, 1rem);
+  font-size: clamp(.85rem, 1.35vw, 1.2rem);
   font-style: italic;
 }
 
-.polaroid-one { left: 5%; top: 22%; transform: rotate(-12deg); }
-.polaroid-two { right: 3%; top: 9%; transform: rotate(10deg); }
-.polaroid-three { right: 12%; bottom: 8%; transform: rotate(-5deg); }
+.polaroid-one { left: -6%; top: 15%; transform: rotate(-12deg); }
+.polaroid-two { right: -8%; top: 1%; transform: rotate(10deg); }
+.polaroid-three { right: -1%; bottom: 3%; transform: rotate(-5deg); }
 
 .orbit {
   position: absolute;
@@ -225,18 +229,21 @@ h1 em, h2 em { color: var(--raspberry); font-weight: 400; }
   font-weight: 600;
   letter-spacing: .15em;
 }
-.year-start { top: 18%; left: 4%; }
-.year-now { right: 0; bottom: 20%; }
+/* The polaroids own the right-hand side, so the timeline labels run down the left edge. */
+.year-start { top: 2%; left: 0; }
+.year-now { right: auto; bottom: 7%; left: 0; }
 .hero-art > p {
   position: absolute;
-  right: 3%;
-  top: 23%;
+  top: auto;
+  right: auto;
+  bottom: 29%;
+  left: 0;
   margin: 0;
   color: var(--raspberry);
   font-family: var(--display);
   font-size: 1.05rem;
   font-style: italic;
-  transform: rotate(8deg);
+  transform: rotate(-6deg);
 }
 
 .time-section {
@@ -426,6 +433,14 @@ footer {
   50% { transform: scale(1.035); }
 }
 
+/* Between the phone stack and a wide desktop there is not enough page margin for the
+   right-hand polaroids to bleed into, so hold them inside the page. */
+@media (max-width: 1300px) {
+  .polaroid-one { left: 1%; }
+  .polaroid-two { right: 2%; }
+  .polaroid-three { right: 3%; }
+}
+
 @media (max-width: 850px) {
   :root { --page: min(100% - 36px, 650px); }
   .site-header { height: 76px; }
@@ -434,13 +449,18 @@ footer {
   .hero { grid-template-columns: 1fr; padding-top: 7vh; }
   h1 { font-size: clamp(4rem, 16vw, 6.8rem); }
   .intro { margin-top: 30px; }
-  .hero-art { min-height: 430px; margin-top: 30px; }
+  .hero-art { min-height: 640px; margin-top: 30px; }
   .heart-shape { width: min(245px, 58vw); }
-  .hero-polaroid { width: clamp(100px, 24vw, 132px); }
+  .hero-polaroid { width: clamp(140px, 30vw, 200px); }
   .orbit-one { width: min(440px, 94vw); }
   .orbit-two { width: min(500px, 108vw); }
-  .year-start { left: 7%; }
-  .year-now { right: 5%; }
+  /* Stacked hero: keep every polaroid inside the screen instead of bleeding off it. */
+  .polaroid-one { left: 5%; top: 2%; }
+  .polaroid-two { right: 4%; top: 2%; }
+  .polaroid-three { right: 5%; bottom: 0; }
+  .year-start { top: 50%; left: 2%; }
+  .year-now { right: auto; bottom: 5%; left: 2%; }
+  .hero-art > p { top: auto; right: auto; bottom: 24%; left: 2%; }
   .time-section, .gallery-section { grid-template-columns: 1fr; }
   .time-section { gap: 70px; }
   .fact-stage { min-height: 300px; }
@@ -454,10 +474,14 @@ footer {
   .site-header nav a:first-child { display: none; }
   .hero { padding-bottom: 90px; }
   h1 { font-size: clamp(3.65rem, 17vw, 5.3rem); }
-  .hero-art { min-height: 350px; }
-  .year-start { top: 13%; }
-  .year-now { bottom: 13%; }
-  .hero-art > p { top: 16%; right: 0; }
+  .hero-art { min-height: 500px; }
+  .hero-polaroid { width: clamp(122px, 34vw, 168px); }
+  .polaroid-one { left: 6%; top: 1%; }
+  .polaroid-two { right: 2%; top: 2%; }
+  .polaroid-three { right: 3%; bottom: 0; }
+  .year-start { top: 45%; }
+  .year-now { bottom: 5%; }
+  .hero-art > p { top: auto; right: auto; bottom: 26%; left: 2%; }
   .time-section, .gallery-section { padding-left: 20px; padding-right: 20px; }
   .section-heading h2, .gallery-intro h2 { font-size: clamp(3.1rem, 15vw, 4.8rem); }
   .fact-number { font-size: clamp(3rem, 15vw, 5rem); }
