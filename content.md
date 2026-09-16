@@ -151,98 +151,188 @@ Made for a bubba, by a bubba.
 
 ## Photo captions — all 30, in gallery order
 
-These are the words shown under each photo as the gallery cycles. All 30 now read the same line, as you
-asked — the three whose captions used to differ are included, so the gallery no longer opens on "Us ♡". Edit
-any individual caption below if you want one to say something different.
+These are the words shown under each photo as the gallery cycles. Each filename is followed by an embedded
+preview, then the caption to edit beneath it. All 30 currently read the same line; replace any individual
+caption below if you want it to say something different.
 
 [photo.01.caption] (CarPhoto.webp)
+
+![CarPhoto.webp](photos/optimized/CarPhoto.webp)
+
 2 sweet bubbas in love ♡
 
 [photo.02.caption] (IMG20260729122902.webp)
+
+![IMG20260729122902.webp](photos/optimized/IMG20260729122902.webp)
+
 2 sweet bubbas in love ♡
 
 [photo.03.caption] (IMG_0545.webp)
+
+![IMG_0545.webp](photos/optimized/IMG_0545.webp)
+
 2 sweet bubbas in love ♡
 
 [photo.04.caption] (IMG20260801150927_01.webp)
+
+![IMG20260801150927_01.webp](photos/optimized/IMG20260801150927_01.webp)
+
 2 sweet bubbas in love ♡
 
 [photo.05.caption] (IMG-20260802-WA0077.webp)
+
+![IMG-20260802-WA0077.webp](photos/optimized/IMG-20260802-WA0077.webp)
+
 2 sweet bubbas in love ♡
 
 [photo.06.caption] (IMG-20260803-WA0076.webp)
+
+![IMG-20260803-WA0076.webp](photos/optimized/IMG-20260803-WA0076.webp)
+
 2 sweet bubbas in love ♡
 
 [photo.07.caption] (IMG_0087.webp)
+
+![IMG_0087.webp](photos/optimized/IMG_0087.webp)
+
 2 sweet bubbas in love ♡
 
 [photo.08.caption] (IMG_0122.webp)
+
+![IMG_0122.webp](photos/optimized/IMG_0122.webp)
+
 2 sweet bubbas in love ♡
 
 [photo.09.caption] (IMG_8396.webp)
+
+![IMG_8396.webp](photos/optimized/IMG_8396.webp)
+
 2 sweet bubbas in love ♡
 
 [photo.10.caption] (IMG_6866.webp)
+
+![IMG_6866.webp](photos/optimized/IMG_6866.webp)
+
 2 sweet bubbas in love ♡
 
 [photo.11.caption] (IMG_4306.webp)
+
+![IMG_4306.webp](photos/optimized/IMG_4306.webp)
+
 2 sweet bubbas in love ♡
 
 [photo.12.caption] (IMG_4020_1.webp)
+
+![IMG_4020_1.webp](photos/optimized/IMG_4020_1.webp)
+
 2 sweet bubbas in love ♡
 
 [photo.13.caption] (IMG20250414141029.webp)
+
+![IMG20250414141029.webp](photos/optimized/IMG20250414141029.webp)
+
 2 sweet bubbas in love ♡
 
 [photo.14.caption] (IMG-20250401-WA0001.webp)
+
+![IMG-20250401-WA0001.webp](photos/optimized/IMG-20250401-WA0001.webp)
+
 2 sweet bubbas in love ♡
 
 [photo.15.caption] (IMG-20250401-WA0003.webp)
+
+![IMG-20250401-WA0003.webp](photos/optimized/IMG-20250401-WA0003.webp)
+
 2 sweet bubbas in love ♡
 
 [photo.16.caption] (IMG-20250330-WA0058.webp)
+
+![IMG-20250330-WA0058.webp](photos/optimized/IMG-20250330-WA0058.webp)
+
 2 sweet bubbas in love ♡
 
 [photo.17.caption] (IMG-20250330-WA0059.webp)
+
+![IMG-20250330-WA0059.webp](photos/optimized/IMG-20250330-WA0059.webp)
+
 2 sweet bubbas in love ♡
 
 [photo.18.caption] (IMG-20250330-WA0061.webp)
+
+![IMG-20250330-WA0061.webp](photos/optimized/IMG-20250330-WA0061.webp)
+
 2 sweet bubbas in love ♡
 
 [photo.19.caption] (IMG-20250330-WA0063.webp)
+
+![IMG-20250330-WA0063.webp](photos/optimized/IMG-20250330-WA0063.webp)
+
 2 sweet bubbas in love ♡
 
 [photo.20.caption] (IMG-20250330-WA0069.webp)
+
+![IMG-20250330-WA0069.webp](photos/optimized/IMG-20250330-WA0069.webp)
+
 2 sweet bubbas in love ♡
 
 [photo.21.caption] (IMG_20250330_113114.webp)
+
+![IMG_20250330_113114.webp](photos/optimized/IMG_20250330_113114.webp)
+
 2 sweet bubbas in love ♡
 
 [photo.22.caption] (IMG-20250326-WA0060.webp)
+
+![IMG-20250326-WA0060.webp](photos/optimized/IMG-20250326-WA0060.webp)
+
 2 sweet bubbas in love ♡
 
 [photo.23.caption] (IMG-20250326-WA0061.webp)
+
+![IMG-20250326-WA0061.webp](photos/optimized/IMG-20250326-WA0061.webp)
+
 2 sweet bubbas in love ♡
 
 [photo.24.caption] (IMG-20250326-WA0063.webp)
+
+![IMG-20250326-WA0063.webp](photos/optimized/IMG-20250326-WA0063.webp)
+
 2 sweet bubbas in love ♡
 
 [photo.25.caption] (IMG-20250326-WA0067.webp)
+
+![IMG-20250326-WA0067.webp](photos/optimized/IMG-20250326-WA0067.webp)
+
 2 sweet bubbas in love ♡
 
 [photo.26.caption] (IMG-20250326-WA0069.webp)
+
+![IMG-20250326-WA0069.webp](photos/optimized/IMG-20250326-WA0069.webp)
+
 2 sweet bubbas in love ♡
 
 [photo.27.caption] (IMG-20250326-WA0070.webp)
+
+![IMG-20250326-WA0070.webp](photos/optimized/IMG-20250326-WA0070.webp)
+
 2 sweet bubbas in love ♡
 
 [photo.28.caption] (IMG-20250326-WA0071.webp)
+
+![IMG-20250326-WA0071.webp](photos/optimized/IMG-20250326-WA0071.webp)
+
 2 sweet bubbas in love ♡
 
 [photo.29.caption] (IMG-20250326-WA0072.webp)
+
+![IMG-20250326-WA0072.webp](photos/optimized/IMG-20250326-WA0072.webp)
+
 2 sweet bubbas in love ♡
 
 [photo.30.caption] (35883d1e-5b2a-4f2f-9a35-33e95fbf0483.webp)
+
+![35883d1e-5b2a-4f2f-9a35-33e95fbf0483.webp](photos/optimized/35883d1e-5b2a-4f2f-9a35-33e95fbf0483.webp)
+
 2 sweet bubbas in love ♡
 
 ---
