@@ -7,52 +7,9 @@ function updateTimeTogether() {
   const hours = Math.floor(seconds / 3600);
   const days = Math.floor(seconds / 86400);
 
-  document.querySelector('#days-together').textContent = `${days.toLocaleString()} days`;
-  document.querySelector('#hours-together').textContent = `${hours.toLocaleString()} hours`;
-  document.querySelector('#seconds-together').textContent = `${seconds.toLocaleString()} seconds`;
-}
-
-function createCarousel(items, dotsContainer, previousButton, nextButton, intervalMs = 6500) {
-  let current = 0;
-  let timer;
-
-  const show = (index) => {
-    current = (index + items.length) % items.length;
-    items.forEach((item, itemIndex) => item.classList.toggle('is-active', itemIndex === current));
-    [...dotsContainer.children].forEach((dot, dotIndex) => {
-      dot.classList.toggle('is-active', dotIndex === current);
-      dot.setAttribute('aria-current', dotIndex === current ? 'true' : 'false');
-    });
-  };
-
-  const restart = () => {
-    window.clearInterval(timer);
-    timer = window.setInterval(() => show(current + 1), intervalMs);
-  };
-
-  items.forEach((_, index) => {
-    const dot = document.createElement('button');
-    dot.className = 'dot';
-    dot.type = 'button';
-    dot.setAttribute('aria-label', `Show fact ${index + 1}`);
-    dot.addEventListener('click', () => { show(index); restart(); });
-    dotsContainer.append(dot);
-  });
-
-  previousButton.addEventListener('click', () => { show(current - 1); restart(); });
-  nextButton.addEventListener('click', () => { show(current + 1); restart(); });
-  show(0);
-  restart();
-}
-
-function initialiseFactCarousel() {
-  const facts = [...document.querySelectorAll('[data-fact]')];
-  createCarousel(
-    facts,
-    document.querySelector('[data-fact-dots]'),
-    document.querySelector('[data-fact-prev]'),
-    document.querySelector('[data-fact-next]')
-  );
+  document.querySelector('#days-together').textContent = days.toLocaleString();
+  document.querySelector('#hours-together').textContent = hours.toLocaleString();
+  document.querySelector('#seconds-together').textContent = seconds.toLocaleString();
 }
 
 function initialisePhotoGallery() {
@@ -102,5 +59,4 @@ function initialisePhotoGallery() {
 
 updateTimeTogether();
 window.setInterval(updateTimeTogether, 1000);
-initialiseFactCarousel();
 initialisePhotoGallery();

@@ -73,27 +73,19 @@
         <h2 id="time-title">A lot can happen in four years</h2>
       </div>
 
-      <div class="fact-carousel" aria-roledescription="carousel" aria-label="Things that mark our time together">
-        <div class="fact-stage" aria-live="polite">
-          <article class="fact is-active" data-fact>
-            <p class="fact-number" id="days-together">1,460 days</p>
-            <p class="fact-copy">of trouble and mischief and cuddles and kissies.</p>
-          </article>
-          <article class="fact" data-fact>
-            <p class="fact-number" id="hours-together">35,056 hours</p>
-            <p class="fact-copy">of waiting for bubba to wake up in a different timezone.</p>
-          </article>
-          <article class="fact" data-fact>
-            <p class="fact-number" id="seconds-together">126,201,778 seconds</p>
-            <p class="fact-copy">of wanting to squish a bubba face.</p>
-          </article>
-        </div>
-
-        <div class="carousel-controls">
-          <button class="round-button" type="button" data-fact-prev aria-label="Previous fact">←</button>
-          <div class="carousel-progress" data-fact-dots aria-label="Choose a fact"></div>
-          <button class="round-button" type="button" data-fact-next aria-label="Next fact">→</button>
-        </div>
+      <div class="fact-grid" aria-label="Things that mark our time together" role="list">
+        <article class="fact" role="listitem">
+          <p class="fact-number"><span id="days-together">1,460</span> <span class="fact-unit">days</span></p>
+          <p class="fact-copy">of trouble and mischief and cuddles and kissies.</p>
+        </article>
+        <article class="fact" role="listitem">
+          <p class="fact-number"><span id="hours-together">35,056</span> <span class="fact-unit">hours</span></p>
+          <p class="fact-copy">of waiting for bubba to wake up in a different timezone.</p>
+        </article>
+        <article class="fact" role="listitem">
+          <p class="fact-number"><span id="seconds-together">126,201,778</span> <span class="fact-unit">seconds</span></p>
+          <p class="fact-copy">of wanting to squish a bubba face.</p>
+        </article>
       </div>
     </section>
 

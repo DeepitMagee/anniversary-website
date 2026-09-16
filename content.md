@@ -266,15 +266,6 @@ Things that mark our time together
 [aria.galleryCarousel]
 Our photo memories
 
-[aria.previousFact]
-Previous fact
-
-[aria.nextFact]
-Next fact
-
-[aria.chooseFact]
-Choose a fact
-
 [aria.previousPhoto]
 Previous photo
 
