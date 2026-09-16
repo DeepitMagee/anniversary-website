@@ -1,5 +1,5 @@
-// Change this date if your anniversary is not 16 September 2022.
-const ANNIVERSARY_START = new Date('2022-09-16T00:00:00');
+// Change this date if your anniversary is not 17 September 2022.
+const ANNIVERSARY_START = new Date('2022-09-17T00:00:00');
 
 function updateTimeTogether() {
   const elapsedMs = Math.max(0, Date.now() - ANNIVERSARY_START.getTime());
