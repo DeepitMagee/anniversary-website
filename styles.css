@@ -150,17 +150,6 @@ h1 em, h2 em { color: var(--raspberry); font-weight: 400; }
   overflow: visible;
   filter: drop-shadow(0 35px 38px rgba(155, 30, 77, .2));
 }
-.heart-shape span {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  display: grid;
-  place-items: center;
-  color: var(--white);
-  font-family: var(--display);
-  font-size: clamp(4rem, 8vw, 7rem);
-  letter-spacing: -.06em;
-}
 
 .hero-polaroids {
   position: absolute;
