@@ -1,7 +1,7 @@
 // Change this date if your anniversary is not 17 September 2022.
 const ANNIVERSARY_START = new Date('2022-09-17T00:00:00');
 const SOUNDTRACK_TRACKS = [
-  { id: 'DULDIS2qlCU', startSeconds: 15 },
+  { id: 'F7ENLXURT08', startSeconds: 21 },
   { id: '9JDSGhhiOwI', startSeconds: 13 },
   { id: 'qoq8B8ThgEM', startSeconds: 17 },
   { id: '49x8GA2axfc', startSeconds: 8 }
