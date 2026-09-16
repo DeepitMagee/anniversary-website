@@ -111,7 +111,7 @@ The eyebrow line is gone.
 A lifetime of | *memories.*
 
 [gallery.intro]
-How has it been a lifetime already? Look at us. So much we’ve done, and yet we a whole life ahead to live. I can’t wait for it, baby.
+How has it been a lifetime already? Look at us. So much we’ve done, and yet we have a whole life ahead to live. I can’t wait for it, baby.
 
 [gallery.emptyCaption]
 Our story belongs here
@@ -141,98 +141,99 @@ Made for a bubba, by a bubba.
 
 ## Photo captions — all 30, in gallery order
 
-These are the words shown under each photo as the gallery cycles, and they are still the originals: 27 of
-them read "A memory of us". Specific beats generic here, whenever you feel like it.
+These are the words shown under each photo as the gallery cycles. All 30 now read the same line, as you
+asked — the three whose captions used to differ are included, so the gallery no longer opens on "Us ♡". Edit
+any individual caption below if you want one to say something different.
 
 [photo.01.caption] (CarPhoto.webp)
-Us ♡
+2 sweet bubbas in love ♡
 
 [photo.02.caption] (IMG20260729122902.webp)
-Together
+2 sweet bubbas in love ♡
 
 [photo.03.caption] (IMG_0545.webp)
-Always
+2 sweet bubbas in love ♡
 
 [photo.04.caption] (IMG20260801150927_01.webp)
-A memory of us
+2 sweet bubbas in love ♡
 
 [photo.05.caption] (IMG-20260802-WA0077.webp)
-A memory of us
+2 sweet bubbas in love ♡
 
 [photo.06.caption] (IMG-20260803-WA0076.webp)
-A memory of us
+2 sweet bubbas in love ♡
 
 [photo.07.caption] (IMG_0087.webp)
-A memory of us
+2 sweet bubbas in love ♡
 
 [photo.08.caption] (IMG_0122.webp)
-A memory of us
+2 sweet bubbas in love ♡
 
 [photo.09.caption] (IMG_8396.webp)
-A memory of us
+2 sweet bubbas in love ♡
 
 [photo.10.caption] (IMG_6866.webp)
-A memory of us
+2 sweet bubbas in love ♡
 
 [photo.11.caption] (IMG_4306.webp)
-A memory of us
+2 sweet bubbas in love ♡
 
 [photo.12.caption] (IMG_4020_1.webp)
-A memory of us
+2 sweet bubbas in love ♡
 
 [photo.13.caption] (IMG20250414141029.webp)
-A memory of us
+2 sweet bubbas in love ♡
 
 [photo.14.caption] (IMG-20250401-WA0001.webp)
-A memory of us
+2 sweet bubbas in love ♡
 
 [photo.15.caption] (IMG-20250401-WA0003.webp)
-A memory of us
+2 sweet bubbas in love ♡
 
 [photo.16.caption] (IMG-20250330-WA0058.webp)
-A memory of us
+2 sweet bubbas in love ♡
 
 [photo.17.caption] (IMG-20250330-WA0059.webp)
-A memory of us
+2 sweet bubbas in love ♡
 
 [photo.18.caption] (IMG-20250330-WA0061.webp)
-A memory of us
+2 sweet bubbas in love ♡
 
 [photo.19.caption] (IMG-20250330-WA0063.webp)
-A memory of us
+2 sweet bubbas in love ♡
 
 [photo.20.caption] (IMG-20250330-WA0069.webp)
-A memory of us
+2 sweet bubbas in love ♡
 
 [photo.21.caption] (IMG_20250330_113114.webp)
-A memory of us
+2 sweet bubbas in love ♡
 
 [photo.22.caption] (IMG-20250326-WA0060.webp)
-A memory of us
+2 sweet bubbas in love ♡
 
 [photo.23.caption] (IMG-20250326-WA0061.webp)
-A memory of us
+2 sweet bubbas in love ♡
 
 [photo.24.caption] (IMG-20250326-WA0063.webp)
-A memory of us
+2 sweet bubbas in love ♡
 
 [photo.25.caption] (IMG-20250326-WA0067.webp)
-A memory of us
+2 sweet bubbas in love ♡
 
 [photo.26.caption] (IMG-20250326-WA0069.webp)
-A memory of us
+2 sweet bubbas in love ♡
 
 [photo.27.caption] (IMG-20250326-WA0070.webp)
-A memory of us
+2 sweet bubbas in love ♡
 
 [photo.28.caption] (IMG-20250326-WA0071.webp)
-A memory of us
+2 sweet bubbas in love ♡
 
 [photo.29.caption] (IMG-20250326-WA0072.webp)
-A memory of us
+2 sweet bubbas in love ♡
 
 [photo.30.caption] (35883d1e-5b2a-4f2f-9a35-33e95fbf0483.webp)
-A memory of us
+2 sweet bubbas in love ♡
 
 ---
 
