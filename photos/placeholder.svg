@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1500" role="img" aria-labelledby="title desc">
+  <title id="title">Photo placeholder</title>
+  <desc id="desc">A warm pink abstract background with a heart and an invitation to add a photograph.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#f5aec6"/>
+      <stop offset=".52" stop-color="#c82f68"/>
+      <stop offset="1" stop-color="#5e1732"/>
+    </linearGradient>
+    <filter id="blur"><feGaussianBlur stdDeviation="75"/></filter>
+  </defs>
+  <rect width="1200" height="1500" fill="url(#bg)"/>
+  <circle cx="170" cy="240" r="270" fill="#fff" opacity=".16" filter="url(#blur)"/>
+  <circle cx="1090" cy="1230" r="340" fill="#310313" opacity=".18" filter="url(#blur)"/>
+  <path d="M600 850C390 710 270 610 270 430c0-125 90-215 210-215 72 0 134 34 170 92 36-58 98-92 170-92 120 0 210 90 210 215 0 180-120 280-330 420l-50 34z" fill="none" stroke="#fff" stroke-width="5" opacity=".75"/>
+  <text x="600" y="1000" fill="#fff" opacity=".9" text-anchor="middle" font-family="Georgia, serif" font-size="48" font-style="italic">Add your favourite photo</text>
+</svg>

@@ -3,12 +3,113 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Anniversary Website Test</title>
+  <meta name="theme-color" content="#fff7fa">
+  <meta name="description" content="Four years of us — a small celebration of a very big love.">
+  <title>Happy Anniversary, My Love</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="photos/photos.js" defer></script>
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <main>
-    <h1>It works ❤️</h1>
-    <p>This is the test page for our anniversary website.</p>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a class="wordmark" href="#top" aria-label="Back to the beginning">D <span>♡</span> M</a>
+    <nav aria-label="Page sections">
+      <a href="#our-time">Our time</a>
+      <a href="#our-photos">Our photos</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span></span> Four years of us</p>
+        <h1 id="hero-title">Happy Anniversary,<br><em>my love.</em></h1>
+        <p class="intro">Four years is a long time. Long enough to build a language that belongs only to us, collect a thousand small stories, and still feel as though we are only at the beginning. This is a little place for all of it.</p>
+        <a class="text-link" href="#our-time">Look how far we’ve come <span aria-hidden="true">↓</span></a>
+      </div>
+
+      <div class="hero-art" aria-hidden="true">
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
+        <div class="year year-start">2022</div>
+        <div class="heart-shape"><span>04</span></div>
+        <div class="year year-now">2026</div>
+        <p>and counting</p>
+      </div>
+    </section>
+
+    <section class="time-section" id="our-time" aria-labelledby="time-title">
+      <div class="section-heading">
+        <p class="eyebrow"><span></span> A lot can happen</p>
+        <h2 id="time-title">Four years,<br><em>by the numbers.</em></h2>
+      </div>
+
+      <div class="fact-carousel" aria-roledescription="carousel" aria-label="Things that mark our time together">
+        <div class="fact-stage" aria-live="polite">
+          <article class="fact is-active" data-fact>
+            <p class="fact-number">Before ChatGPT</p>
+            <p class="fact-copy">When we got together, ChatGPT had not even launched yet. The world has changed quite a bit. The best part of mine hasn’t.</p>
+          </article>
+          <article class="fact" data-fact>
+            <p class="fact-number" id="days-together">1,461 days</p>
+            <p class="fact-copy">Days of choosing each other — on ordinary Tuesdays, brilliant weekends and everything in between.</p>
+          </article>
+          <article class="fact" data-fact>
+            <p class="fact-number" id="hours-together">35,064 hours</p>
+            <p class="fact-copy">Hours in the same story. More than enough to know you, nowhere near enough to be finished.</p>
+          </article>
+          <article class="fact" data-fact>
+            <p class="fact-number" id="seconds-together">126,230,400 seconds</p>
+            <p class="fact-copy">And this number keeps growing every second — just like everything I love about us.</p>
+          </article>
+        </div>
+
+        <div class="carousel-controls">
+          <button class="round-button" type="button" data-fact-prev aria-label="Previous fact">←</button>
+          <div class="carousel-progress" data-fact-dots aria-label="Choose a fact"></div>
+          <button class="round-button" type="button" data-fact-next aria-label="Next fact">→</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery-section" id="our-photos" aria-labelledby="gallery-title">
+      <div class="gallery-intro">
+        <p class="eyebrow light"><span></span> Us, in frames</p>
+        <h2 id="gallery-title">A few moments<br><em>I’d keep forever.</em></h2>
+        <p>Some of the places we’ve been, the days we’ve shared, and the versions of ourselves we became along the way.</p>
+      </div>
+
+      <div class="photo-carousel" aria-roledescription="carousel" aria-label="Our photo memories">
+        <div class="photo-frame" data-photo-frame aria-live="polite">
+          <img data-gallery-image src="photos/placeholder.svg" alt="Add your favourite photos to begin the gallery">
+          <div class="photo-vignette" aria-hidden="true"></div>
+          <div class="photo-caption">
+            <p data-photo-caption>Our story belongs here</p>
+            <span data-photo-count>01 / 01</span>
+          </div>
+        </div>
+        <div class="gallery-controls">
+          <button class="gallery-button" type="button" data-photo-prev aria-label="Previous photo">←</button>
+          <button class="gallery-button" type="button" data-photo-next aria-label="Next photo">→</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing" aria-label="Anniversary message">
+      <p>Four down.</p>
+      <h2>Forever to go.</h2>
+      <span>With all my love ♡</span>
+    </section>
   </main>
+
+  <footer>
+    <p>Made for us, with love.</p>
+    <p>2022—2026</p>
+  </footer>
 </body>
 </html>
