@@ -71,9 +71,10 @@ in love
 
 ## Second section — the counters
 
-The "Before ChatGPT" card is gone, so this section now holds only the three live counters. Each big figure
-is calculated from your anniversary date and updates every second — nothing to edit for the number itself.
-The word after the number, and the line underneath, are yours.
+The "Before ChatGPT" card is gone, so this section now holds the four counters. The first three live counters
+are calculated from your anniversary date and update every second — nothing to edit for those numbers. The
+fourth line is a fixed promise.
+The word after each number, and the line underneath, are yours.
 
 [facts.headline]
 A lot can happen in four years
@@ -95,6 +96,15 @@ seconds
 
 [fact4.copy]
 of wanting to squish a bubba face.
+
+[fact5.number]
+0
+
+[fact5.numberWords]
+days
+
+[fact5.copy]
+of breakups - NOT ALLOWED.
 
 The date the count-up runs from:
 

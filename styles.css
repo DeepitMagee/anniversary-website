@@ -256,9 +256,17 @@ h1 em, h2 em { color: var(--raspberry); font-weight: 400; }
   min-width: 0;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: clamp(22px, 2.8vw, 44px);
+  column-gap: clamp(22px, 2.8vw, 44px);
+  row-gap: clamp(22px, 2.8vw, 44px);
 }
 .fact { min-width: 0; }
+.fact-breakups {
+  grid-column: 1 / -1;
+  justify-self: center;
+  margin-top: clamp(8px, 1.6vw, 22px);
+  text-align: center;
+}
+.fact-breakups .fact-copy { max-width: none; }
 .fact-number {
   margin: 0 0 26px;
   color: var(--wine);
@@ -480,6 +488,7 @@ footer {
   .time-section, .gallery-section { padding-left: 20px; padding-right: 20px; }
   .section-heading h2, .gallery-intro h2 { font-size: clamp(3.1rem, 15vw, 4.8rem); }
   .fact-grid { grid-template-columns: 1fr; gap: 42px; }
+  .fact-breakups { grid-column: 1; }
   .fact-number { font-size: clamp(3rem, 15vw, 5rem); }
   .gallery-controls { left: -10px; right: -10px; }
   .gallery-button { width: 46px; height: 46px; }
