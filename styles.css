@@ -68,6 +68,92 @@ nav a {
 }
 nav a:hover, nav a:focus-visible { color: var(--raspberry); }
 
+.soundtrack-bar {
+  width: var(--page);
+  margin: 0 auto;
+  padding: 12px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  border-top: 1px solid rgba(94,23,50,.12);
+  border-bottom: 1px solid rgba(94,23,50,.12);
+}
+.soundtrack-copy {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.soundtrack-label {
+  color: var(--raspberry);
+  font-size: .68rem;
+  font-weight: 600;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+.soundtrack-track,
+.soundtrack-state {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.soundtrack-track {
+  color: var(--ink);
+  font-size: .88rem;
+  font-weight: 600;
+}
+.soundtrack-state {
+  color: var(--muted);
+  font-size: .72rem;
+}
+.soundtrack-controls {
+  display: flex;
+  flex: 0 0 auto;
+  gap: 8px;
+}
+.soundtrack-button {
+  padding: 8px 12px;
+  border: 1px solid rgba(94,23,50,.24);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--wine);
+  cursor: pointer;
+  font-size: .75rem;
+  font-weight: 600;
+  letter-spacing: .02em;
+  transition: background .2s ease, color .2s ease, opacity .2s ease;
+}
+.soundtrack-button:hover:not(:disabled),
+.soundtrack-button:focus-visible:not(:disabled) {
+  background: var(--blush);
+}
+.soundtrack-button:disabled {
+  cursor: wait;
+  opacity: .45;
+}
+.soundtrack-play {
+  border-color: var(--wine);
+  background: var(--wine);
+  color: var(--white);
+}
+.soundtrack-play:hover:not(:disabled),
+.soundtrack-play:focus-visible:not(:disabled) {
+  background: var(--raspberry);
+  color: var(--white);
+}
+.soundtrack-player-shell {
+  position: fixed;
+  top: 0;
+  left: -10000px;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+.soundtrack-player-shell iframe { display: block; }
+
 .hero {
   width: var(--page);
   min-height: calc(100svh - 92px);
@@ -467,6 +553,9 @@ footer {
   .year-start { top: 50%; left: 2%; }
   .year-now { right: auto; bottom: 5%; left: 2%; }
   .hero-art > p { top: auto; right: auto; bottom: 24%; left: 2%; }
+  .soundtrack-bar { align-items: flex-start; flex-direction: column; gap: 10px; }
+  .soundtrack-controls { width: 100%; }
+  .soundtrack-button { flex: 1; }
   .time-section, .gallery-section { grid-template-columns: 1fr; }
   .time-section { gap: 70px; }
   .gallery-section { gap: 65px; }

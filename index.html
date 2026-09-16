@@ -28,6 +28,21 @@
   </header>
 
   <main id="top">
+    <aside class="soundtrack-bar" aria-label="Our soundtrack">
+      <div class="soundtrack-copy">
+        <span class="soundtrack-label">Our soundtrack</span>
+        <span class="soundtrack-track" data-music-track aria-live="polite">Loading soundtrack…</span>
+        <span class="soundtrack-state" data-music-state>Preparing the songs</span>
+      </div>
+      <div class="soundtrack-controls">
+        <button class="soundtrack-button soundtrack-play" type="button" data-music-play disabled>Play</button>
+        <button class="soundtrack-button" type="button" data-music-next disabled>Next song <span aria-hidden="true">→</span></button>
+      </div>
+      <div class="soundtrack-player-shell" aria-hidden="true">
+        <div id="youtube-player"></div>
+      </div>
+    </aside>
+
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero-copy">
         <h1 id="hero-title">Happy Anniversary,<br><em>my love.</em></h1>
