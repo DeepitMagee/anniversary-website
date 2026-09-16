@@ -7,6 +7,11 @@
 The page never loads the originals in `photos/` — it only ever requests `photos/optimized/*.webp`, which is
 roughly 6 MB for 30 photos instead of 110 MB. Keep the originals in `photos/` as your source of truth.
 
+4. Run `./photos/build-mosaic.sh` whenever the photo set changes. It crops every photo into a 256 px square
+   cell, stacks them into one `photos/optimized/background-mosaic.webp` (about 250 KB) and reports the grid
+   it made. `styles.css` repeats that file behind the gallery section, under a dark wine scrim — change the
+   `linear-gradient` alphas in `.gallery-section` to make the background lighter or darker.
+
 Example:
 
 ```js

@@ -315,7 +315,17 @@ h1 em, h2 em { color: var(--raspberry); font-weight: 400; }
 
 .gallery-section {
   padding: clamp(100px, 13vw, 180px) max(24px, calc((100vw - 1200px) / 2));
-  background: var(--wine);
+  /* Every photo as a repeating mosaic, held back by a wine scrim so the copy stays readable. */
+  background-color: var(--wine);
+  background-image:
+    linear-gradient(180deg,
+      rgba(46, 8, 24, .93) 0%,
+      rgba(94, 23, 50, .86) 46%,
+      rgba(46, 8, 24, .94) 100%),
+    url("photos/optimized/background-mosaic.webp");
+  background-size: auto, 768px 640px;
+  background-position: center, center top;
+  background-repeat: no-repeat, repeat;
   color: var(--white);
   display: grid;
   grid-template-columns: .72fr 1.28fr;
@@ -327,7 +337,7 @@ h1 em, h2 em { color: var(--raspberry); font-weight: 400; }
 .gallery-intro > p:last-child {
   max-width: 400px;
   margin: 32px 0 0;
-  color: rgba(255,253,253,.67);
+  color: rgba(255,253,253,.74);
   line-height: 1.7;
 }
 .photo-carousel { position: relative; min-width: 0; }
